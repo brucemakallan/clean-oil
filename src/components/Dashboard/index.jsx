@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faCalendar, faTimes } from '@fortawesome/free-solid-svg-icons';
+import {
+  faBars, faTimes, faHome, faTh,
+} from '@fortawesome/free-solid-svg-icons';
 import './dashboard.scss';
 
 class Dashboard extends Component {
@@ -28,16 +30,26 @@ class Dashboard extends Component {
         <nav id="sidebar" className="sidebar-wrapper">
           <div className="sidebar-content">
             <div className="sidebar-brand">
-              <button type="button" id="close-sidebar" onClick={this.toggleSidebar}>
+              <button type="button" id="close-sidebar" className="icon-button" onClick={this.toggleSidebar}>
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
             <div className="sidebar-menu">
               <ul>
                 <li>
-                  <a href="/">
-                    <FontAwesomeIcon icon={faCalendar} />
-                    <span>Calendar</span>
+                  <a href="/" className="sidebar-link">
+                    <span className="boxed-icon">
+                      <FontAwesomeIcon icon={faHome} />
+                    </span>
+                    <span className="link-title">Homepage</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="/dashboard/sections" className="sidebar-link active">
+                    <div className="boxed-icon">
+                      <FontAwesomeIcon icon={faTh} />
+                    </div>
+                    <div className="link-title">Website Sections</div>
                   </a>
                 </li>
               </ul>
