@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-  faBars, faTimes, faHome, faTh,
+  faBars, faTimes, faHome, faTh, faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import './dashboard.scss';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import WebsiteSections from '../WebsiteSections';
+import Admin from '../Admin';
 
 class Dashboard extends Component {
   state = {
@@ -20,8 +23,31 @@ class Dashboard extends Component {
     });
   }
 
+  setActive = (url) => {
+    const { location: { pathname } } = this.props;
+    return pathname === url ? 'active' : '';
+  }
+
   render() {
     const { toggled } = this.state;
+
+    const links = [
+      {
+        title: 'Homepage',
+        icon: faHome,
+        url: '/',
+      },
+      {
+        title: 'Website Sections',
+        icon: faTh,
+        url: '/dashboard/sections',
+      },
+      {
+        title: 'Admin',
+        icon: faUser,
+        url: '/dashboard/admin',
+      },
+    ];
 
     return (
       <div className={`page-wrapper ${toggled}`}>
@@ -37,22 +63,16 @@ class Dashboard extends Component {
             </div>
             <div className="sidebar-menu">
               <ul>
-                <li>
-                  <Link to="/" className="sidebar-link">
-                    <span className="boxed-icon">
-                      <FontAwesomeIcon icon={faHome} />
-                    </span>
-                    <span className="link-title">Homepage</span>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/dashboard/sections" className="sidebar-link active">
-                    <div className="boxed-icon">
-                      <FontAwesomeIcon icon={faTh} />
-                    </div>
-                    <div className="link-title">Website Sections</div>
-                  </Link>
-                </li>
+                {links.map(link => (
+                  <li key={link.title}>
+                    <Link to={link.url} className={`sidebar-link ${this.setActive(link.url)}`}>
+                      <span className="boxed-icon">
+                        <FontAwesomeIcon icon={link.icon} />
+                      </span>
+                      <span className="link-title">{link.title}</span>
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
@@ -60,7 +80,8 @@ class Dashboard extends Component {
 
         <main className="page-content">
           <div className="container-fluid">
-            <h2>Dashboard</h2>
+            <Route path="/dashboard/sections" component={WebsiteSections} />
+            <Route path="/dashboard/admin" component={Admin} />
           </div>
         </main>
       </div>
@@ -68,4 +89,7 @@ class Dashboard extends Component {
   }
 }
 
+Dashboard.propTypes = {
+  location: PropTypes.shape({}).isRequired,
+};
 export default Dashboard;
