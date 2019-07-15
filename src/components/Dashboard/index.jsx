@@ -4,6 +4,7 @@ import {
   faBars, faTimes, faHome, faTh,
 } from '@fortawesome/free-solid-svg-icons';
 import './dashboard.scss';
+import { Link } from 'react-router-dom';
 
 class Dashboard extends Component {
   state = {
@@ -37,20 +38,20 @@ class Dashboard extends Component {
             <div className="sidebar-menu">
               <ul>
                 <li>
-                  <a href="/" className="sidebar-link">
+                  <Link to="/" className="sidebar-link">
                     <span className="boxed-icon">
                       <FontAwesomeIcon icon={faHome} />
                     </span>
                     <span className="link-title">Homepage</span>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/dashboard/sections" className="sidebar-link active">
+                  <Link to="/dashboard/sections" className="sidebar-link active">
                     <div className="boxed-icon">
                       <FontAwesomeIcon icon={faTh} />
                     </div>
                     <div className="link-title">Website Sections</div>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

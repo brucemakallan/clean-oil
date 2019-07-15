@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Dashboard from '../Dashboard';
+import Home from '../Home';
 
 
 class App extends Component {
@@ -7,7 +9,12 @@ class App extends Component {
 
   render() {
     return (
-      <Dashboard />
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/dashboard" component={Dashboard} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
