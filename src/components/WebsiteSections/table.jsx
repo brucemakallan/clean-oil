@@ -44,14 +44,14 @@ const WebsiteSectionsTable = ({ data, saveID }) => (
           Cell: ({ value }) => (
             <div>
               <Link
-                className="iconButton"
+                className="icon-button"
                 to={`${paths.dashboard.details}/${value}`}
                 title="View Details"
               >
                 <FontAwesomeIcon icon="eye" className="icon green" />
               </Link>
               <Link
-                className="iconButton effect-button"
+                className="icon-button"
                 to={`${paths.dashboard.sections}/edit/${value}`}
                 title="Edit"
               >

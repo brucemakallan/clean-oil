@@ -31,7 +31,7 @@ const Modal = ({
       <button
         type="button"
         id="closeBt"
-        className="iconButton float-right mt-1"
+        className="icon-button float-right mt-1"
         title="Close"
         onClick={hideModal}
       >

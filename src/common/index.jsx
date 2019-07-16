@@ -1,8 +1,10 @@
 const paths = {
   home: '/',
   dashboard: {
+    base: '/dashboard',
     sections: '/dashboard/sections',
     admin: '/dashboard/admin',
+    details: '/dashboard/details'
   },
 };
 

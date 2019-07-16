@@ -6,10 +6,11 @@ import {
 import './dashboard.scss';
 import { Link, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import WebsiteSections from '../WebsiteSections';
+import WebsiteSectionsPage from '../WebsiteSections';
 import Admin from '../Admin';
 import PageLoader from '../PageLoader';
-import { localFiles } from '../../common';
+import paths, { localFiles } from '../../common';
+import SectionDetails from '../WebsiteSections/details';
 
 
 class Dashboard extends Component {
@@ -38,17 +39,17 @@ class Dashboard extends Component {
       {
         title: 'Homepage',
         icon: faHome,
-        url: '/',
+        url: paths.home,
       },
       {
         title: 'Website Sections',
         icon: faTh,
-        url: '/dashboard/sections',
+        url: paths.dashboard.sections,
       },
       {
         title: 'Admin',
         icon: faUser,
-        url: '/dashboard/admin',
+        url: paths.dashboard.admin,
       },
     ];
 
@@ -86,8 +87,9 @@ class Dashboard extends Component {
         <main className="page-content">
           <div className="container-fluid">
             <PageLoader />
-            <Route path="/dashboard/sections" component={WebsiteSections} />
-            <Route path="/dashboard/admin" component={Admin} />
+            <Route path={paths.dashboard.sections} component={WebsiteSectionsPage} />
+            <Route path={paths.dashboard.admin} component={Admin} />
+            <Route path={`${paths.dashboard.details}/:id`} component={SectionDetails} />
           </div>
         </main>
       </div>
