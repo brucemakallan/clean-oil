@@ -8,6 +8,9 @@ import { Link, Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import WebsiteSections from '../WebsiteSections';
 import Admin from '../Admin';
+import PageLoader from '../PageLoader';
+import { localFiles } from '../../common';
+
 
 class Dashboard extends Component {
   state = {
@@ -49,12 +52,14 @@ class Dashboard extends Component {
       },
     ];
 
+    const style = { backgroundImage: `url(${localFiles.images.prismBackground})` };
+
     return (
       <div className={`page-wrapper ${toggled}`}>
         <button type="button" id="show-sidebar" className="btn btn-sm btn-dark" onClick={this.toggleSidebar}>
           <FontAwesomeIcon icon={faBars} />
         </button>
-        <nav id="sidebar" className="sidebar-wrapper">
+        <nav id="sidebar" className="sidebar-wrapper" style={style}>
           <div className="sidebar-content">
             <div className="sidebar-brand">
               <button type="button" id="close-sidebar" className="icon-button" onClick={this.toggleSidebar}>
@@ -80,6 +85,7 @@ class Dashboard extends Component {
 
         <main className="page-content">
           <div className="container-fluid">
+            <PageLoader />
             <Route path="/dashboard/sections" component={WebsiteSections} />
             <Route path="/dashboard/admin" component={Admin} />
           </div>
