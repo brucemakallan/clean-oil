@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import loaderReducer from './loaderReducer';
-import productsReducer from './productsReducer';
+import sectionsReducer from './websiteSectionsReducer';
 import adminReducer from './adminReducer';
 import emailReducer from './emailReducer';
 
 export default combineReducers({
   loaderReducer,
-  productsReducer,
+  sectionsReducer,
   adminReducer,
   emailReducer,
 });

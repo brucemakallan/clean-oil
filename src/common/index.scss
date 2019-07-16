@@ -1,13 +1,57 @@
-@import '../common/fonts.scss';
+@import './fonts.scss';
+@import './colors.scss';
 
 body {
   margin: 0;
   padding: 0;
   font-family: $Nunito;
 }
+.icon {
+  margin: 0 10px;
+}
 .icon-button {
   border: none;
   background: transparent;
   padding: 0;
   margin: 0;
+}
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.responsive-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+
+  .full {
+    width: 100%;
+  }
+  .half {
+    width: 50%;
+  }
+  .third {
+    width: 33.33%;
+  }
+  .quarter {
+    width: 25%;
+  }
+  .sixth {
+    width: 16.66%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .responsive-flex {
+    flex-flow: column wrap;
+    
+    img {
+      width: 100%;
+    }
+    .responsive-flex-child {
+      width: 100% !important;
+    }
+  }
 }
