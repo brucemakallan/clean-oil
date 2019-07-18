@@ -38,4 +38,11 @@ export const localFiles = {
   },
 };
 
+const article = 'ARTICLE';
+const about = 'ABOUT';
+export const entityTypes = [
+  article,
+  about,
+];
+
 export default paths;

@@ -145,7 +145,7 @@ class Details extends Component {
         {section ? (
           <React.Fragment>
             <div className="flex-container page-header mb-3 mr-3">
-              <button type="button" className="icon-button" onClick={this.goBack}>
+              <button type="button" className="iconButton" onClick={this.goBack}>
                 <FontAwesomeIcon icon="arrow-left" className="icon" />
               </button>
               {section.heading1 ? <h1>{section.heading1}</h1> : ''}

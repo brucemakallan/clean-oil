@@ -17,7 +17,7 @@ export const removeSectionFromState = payload => ({
 
 const headers = {
   headers: {
-    Authorization: `Bearer ${localStorage.getItem('token')}`,
+    Authorization: `Bearer ${localStorage.getItem('cleanoil-token')}`,
   }
 };
 

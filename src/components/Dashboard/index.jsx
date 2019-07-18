@@ -11,6 +11,7 @@ import Admin from '../Admin';
 import PageLoader from '../PageLoader';
 import paths, { localFiles } from '../../common';
 import SectionDetails from '../WebsiteSections/details';
+import WebsiteSectionCreate from '../WebsiteSections/create';
 
 
 class Dashboard extends Component {
@@ -63,7 +64,7 @@ class Dashboard extends Component {
         <nav id="sidebar" className="sidebar-wrapper" style={style}>
           <div className="sidebar-content">
             <div className="sidebar-brand">
-              <button type="button" id="close-sidebar" className="icon-button" onClick={this.toggleSidebar}>
+              <button type="button" id="close-sidebar" className="iconButton" onClick={this.toggleSidebar}>
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
@@ -87,9 +88,11 @@ class Dashboard extends Component {
         <main className="page-content">
           <div className="container-fluid">
             <PageLoader />
-            <Route path={paths.dashboard.sections} component={WebsiteSectionsPage} />
-            <Route path={paths.dashboard.admin} component={Admin} />
+            <Route exact path={paths.dashboard.sections} component={WebsiteSectionsPage} />
+            <Route exact path={paths.dashboard.admin} component={Admin} />
             <Route path={`${paths.dashboard.details}/:id`} component={SectionDetails} />
+            <Route exact path={`${paths.dashboard.sections}/create`} component={WebsiteSectionCreate} />
+            {/* <Route path={`${paths.dashboard.sections}/edit/:id`} component={WebsiteSectionEdit} /> */}
           </div>
         </main>
       </div>
@@ -98,6 +101,8 @@ class Dashboard extends Component {
 }
 
 Dashboard.propTypes = {
-  location: PropTypes.shape({}).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 };
 export default Dashboard;

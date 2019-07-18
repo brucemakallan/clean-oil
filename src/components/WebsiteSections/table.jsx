@@ -44,14 +44,14 @@ const WebsiteSectionsTable = ({ data, saveID }) => (
           Cell: ({ value }) => (
             <div>
               <Link
-                className="icon-button"
+                className="iconButton"
                 to={`${paths.dashboard.details}/${value}`}
                 title="View Details"
               >
                 <FontAwesomeIcon icon="eye" className="icon green" />
               </Link>
               <Link
-                className="icon-button"
+                className="iconButton"
                 to={`${paths.dashboard.sections}/edit/${value}`}
                 title="Edit"
               >
@@ -60,7 +60,7 @@ const WebsiteSectionsTable = ({ data, saveID }) => (
               <button
                 type="button"
                 id="deleteBt"
-                className="icon-button"
+                className="iconButton"
                 onClick={() => saveID(value)}
                 title="Delete"
               >

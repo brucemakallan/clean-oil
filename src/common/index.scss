@@ -9,7 +9,7 @@ body {
 .icon {
   margin: 0 10px;
 }
-.icon-button {
+.iconButton {
   border: none;
   background: transparent;
   padding: 0;
@@ -19,6 +19,11 @@ body {
   margin-right: 5px;
   font-size: 22px;
   color: $primary800;
+}
+.iconBorderedButton {
+  background: transparent;
+  border-radius: 5px;
+  margin: 5px;
 }
 .flex-container {
   display: flex;
