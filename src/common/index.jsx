@@ -45,4 +45,11 @@ export const entityTypes = [
   about,
 ];
 
+export const removeUnsupportedProperties = (passedEntity, unsupportedProperties) => {
+  const entity = passedEntity;
+  unsupportedProperties.map(property => delete entity[property]);
+  return entity;
+};
+
+
 export default paths;

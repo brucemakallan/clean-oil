@@ -12,6 +12,7 @@ import PageLoader from '../PageLoader';
 import paths, { localFiles } from '../../common';
 import SectionDetails from '../WebsiteSections/details';
 import WebsiteSectionCreate from '../WebsiteSections/create';
+import WebsiteSectionEdit from '../WebsiteSections/edit';
 
 
 class Dashboard extends Component {
@@ -92,7 +93,7 @@ class Dashboard extends Component {
             <Route exact path={paths.dashboard.admin} component={Admin} />
             <Route path={`${paths.dashboard.details}/:id`} component={SectionDetails} />
             <Route exact path={`${paths.dashboard.sections}/create`} component={WebsiteSectionCreate} />
-            {/* <Route path={`${paths.dashboard.sections}/edit/:id`} component={WebsiteSectionEdit} /> */}
+            <Route path={`${paths.dashboard.sections}/edit/:id`} component={WebsiteSectionEdit} />
           </div>
         </main>
       </div>
