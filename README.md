@@ -1,5 +1,6 @@
 [![Build Status](https://travis-ci.org/brucemakallan/clean-oil.svg?branch=develop)](https://travis-ci.org/brucemakallan/clean-oil)
 
+[![Coverage Status](https://coveralls.io/repos/github/brucemakallan/clean-oil/badge.svg?branch=develop)](https://coveralls.io/github/brucemakallan/clean-oil?branch=develop)
 
 # Clean Oil Uganda Ltd.
 
