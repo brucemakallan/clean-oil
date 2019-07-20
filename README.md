@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/brucemakallan/clean-oil.svg?branch=develop)](https://travis-ci.org/brucemakallan/clean-oil)
+
+
 # Clean Oil Uganda Ltd.
 
 ### Developer Notes:
