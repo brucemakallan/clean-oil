@@ -756,7 +756,7 @@ exports[`Website Section Details should render correctly 1`] = `
                       transform={null}
                     >
                       <svg
-                        aria-labelledby="svg-inline--fa-title-kgLBlSASYZ1L"
+                        aria-labelledby="svg-inline--fa-title-IY4w88dZtLEA"
                         className="svg-inline--fa fa-file-pdf fa-w-12 file-icon"
                         data-icon="file-pdf"
                         data-prefix="fas"
@@ -766,7 +766,7 @@ exports[`Website Section Details should render correctly 1`] = `
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <title
-                          id="svg-inline--fa-title-kgLBlSASYZ1L"
+                          id="svg-inline--fa-title-IY4w88dZtLEA"
                           style={Object {}}
                         >
                           file
