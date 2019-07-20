@@ -42,13 +42,15 @@ class NavBar extends Component {
                 </button>
               </div>
               <div className="logo">
-                  LOGO
+                <span className="thin">CLEAN</span>
+                <span className="bold">OIL</span>
               </div>
               <div className="menu">
                 <ul className={`${showMenu ? 'showing' : ''}`}>
                   <li><a href="/">Home</a></li>
+                  <li><a href="/">Our Business</a></li>
+                  <li><a href="/">Careers</a></li>
                   <li><a href="/">About</a></li>
-                  <li><a href="/">Blog</a></li>
                   <li><a href="/">Contact</a></li>
                 </ul>
               </div>

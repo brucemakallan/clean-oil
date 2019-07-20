@@ -34,6 +34,7 @@ export const serverResponses = {
 
 export const localFiles = {
   images: {
+    logo: './images/logo.png',
     prismBackground: './images/prism.png',
   },
 };
