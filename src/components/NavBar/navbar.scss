@@ -1,3 +1,5 @@
+@import '../../common/colors.scss';
+
 .navigation-bar {
   .logo {
     line-height: 60px;
@@ -6,7 +8,7 @@
     margin: 16px 46px;
     color: #fff;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     letter-spacing: 2px;
   }
   nav {
@@ -18,7 +20,7 @@
   nav ul {
     line-height: 60px;
     list-style: none;
-    background: rgba(0, 0, 0, 0);
+    background: rgba(0, 0, 0, 0.4);
     overflow: hidden;
     color: #fff;
     padding: 0;
@@ -28,7 +30,11 @@
     transition: all 1s ease-in-out;
   }
   .black-nav ul {
-    background: #000;
+    background: $accentColor;
+
+    li a {
+      font-size: 16px;
+    }
   }
   nav ul li {
     display: inline-block;
@@ -37,7 +43,8 @@
   nav ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
+    transition: all 1s ease-in-out;
   }
   .menu-icon {
     line-height: 60px;

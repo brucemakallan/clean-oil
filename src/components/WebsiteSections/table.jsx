@@ -15,7 +15,7 @@ library.add(faTrash, faPencilAlt, faEye);
 const WebsiteSectionsTable = ({ data, saveID }) => (
   <div>
     <div className="flex-container mb-3">
-      <h1>Articles</h1>
+      <h1>Website Sections</h1>
       <Link className="btn btn-primary btn-sm button-link" to={`${paths.dashboard.sections}/create`}>Create</Link>
     </div>
     <ReactTable

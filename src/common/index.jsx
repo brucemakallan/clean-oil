@@ -39,11 +39,13 @@ export const localFiles = {
   },
 };
 
-const article = 'ARTICLE';
-const about = 'ABOUT';
+export const article = 'ARTICLE';
+export const about = 'ABOUT';
+export const carousel = 'CAROUSEL';
 export const entityTypes = [
   article,
   about,
+  carousel,
 ];
 
 export const removeUnsupportedProperties = (passedEntity, unsupportedProperties) => {

@@ -1,4 +1,19 @@
+$MAX_CAROUSEL_HEIGHT: 600px;
 
+.homepage {
+  #imageCarousel-homepage {
+    .carousel-item {
+      width: 100vw;
+      height: $MAX_CAROUSEL_HEIGHT;
+      
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 800px) {
 }
