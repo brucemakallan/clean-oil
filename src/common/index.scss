@@ -1,5 +1,6 @@
 @import './fonts.scss';
 @import './colors.scss';
+@import './mixins.scss';
 
 html, body {
   margin: 0;
@@ -11,10 +12,12 @@ html, body {
   margin: 0 10px;
 }
 .iconButton {
+  @include no-outline;
   border: none;
   background: transparent;
   padding: 0;
   margin: 0;
+  cursor: pointer;
 }
 .file-icon {
   margin-right: 5px;

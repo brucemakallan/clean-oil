@@ -8,6 +8,7 @@ const TOGGLE_HEIGHT = 200;
 class NavBar extends Component {
   state = {
     scrolled: false,
+    showMenu: false,
   }
 
   componentDidMount() {
@@ -21,8 +22,14 @@ class NavBar extends Component {
     });
   }
 
+  toggleMenu = () => {
+    const { showMenu } = this.state;
+    if (showMenu) this.setState({ showMenu: false });
+    else this.setState({ showMenu: true });
+  }
+
   render() {
-    const { scrolled } = this.state;
+    const { scrolled, showMenu } = this.state;
 
     return (
       <div className="navigation-bar">
@@ -30,13 +37,15 @@ class NavBar extends Component {
           <header>
             <nav className={`${scrolled ? 'black-nav' : ''}`}>
               <div className="menu-icon">
-                <FontAwesomeIcon className="" icon={faBars} />
+                <button type="button" className="iconButton" onClick={this.toggleMenu}>
+                  <FontAwesomeIcon className="white" icon={faBars} />
+                </button>
               </div>
               <div className="logo">
                   LOGO
               </div>
               <div className="menu">
-                <ul>
+                <ul className={`${showMenu ? 'showing' : ''}`}>
                   <li><a href="/">Home</a></li>
                   <li><a href="/">About</a></li>
                   <li><a href="/">Blog</a></li>
