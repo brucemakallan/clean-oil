@@ -5,7 +5,7 @@ import LoginForm from './loginForm';
 import login from '../../redux/actions/admin';
 import paths, { endpoints } from '../../common';
 
-class Admin extends Component {
+export class Admin extends Component {
   state = {
     admin: {
       email: '',
