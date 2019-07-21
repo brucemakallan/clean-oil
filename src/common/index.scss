@@ -63,6 +63,37 @@ html, body {
 .thin {
   font-weight: 300;
 }
+.large {
+  font-size: 3em;
+}
+.section-padding {
+  padding: 50px 100px;
+}
+.section-heading {
+  text-transform: uppercase;
+  font-size: 25px;
+  font-weight: 300;
+  color: $primary;
+  text-align: center;
+
+  hr {
+    width: 50px;
+    background-color: $primary;
+  }
+}
+.material-card {
+  padding: 20px;
+  border-radius: 0 0 5px 5px;
+  -webkit-box-shadow: 6px 7px 20px 0px rgba(0,0,0,0.14);
+  -moz-box-shadow: 6px 7px 20px 0px rgba(0,0,0,0.14);
+  box-shadow: 6px 7px 20px 0px rgba(0,0,0,0.14);
+  background-color: white;
+
+  .card-heading {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+}
 
 @media screen and (max-width: 800px) {
   .responsive-flex {
@@ -74,5 +105,8 @@ html, body {
     .responsive-flex-child {
       width: 100% !important;
     }
+  }
+  .section-padding {
+    padding: 20px;
   }
 }

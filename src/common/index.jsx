@@ -36,16 +36,19 @@ export const localFiles = {
   images: {
     logo: './images/logo.png',
     prismBackground: './images/prism.png',
+    crossword: './images/crossword.png',
   },
 };
 
 export const article = 'ARTICLE';
 export const about = 'ABOUT';
 export const carousel = 'CAROUSEL';
+export const service = 'SERVICE';
 export const entityTypes = [
   article,
   about,
   carousel,
+  service,
 ];
 
 export const removeUnsupportedProperties = (passedEntity, unsupportedProperties) => {

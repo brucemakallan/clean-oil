@@ -5,9 +5,12 @@ import PropTypes from 'prop-types';
 import NavBar from '../NavBar';
 import Carousel from '../Carousel';
 import getAllSections from '../../redux/actions/websiteSections';
-import { endpoints, carousel } from '../../common';
+import {
+  endpoints, carousel, localFiles, service,
+} from '../../common';
 import './home.scss';
 import PageLoader from '../PageLoader';
+import Services from '../Services';
 
 
 class Home extends Component {
@@ -19,19 +22,27 @@ class Home extends Component {
   render() {
     const { sections } = this.props;
     const carouselSection = sections.find(section => section.category === carousel);
+    const services = sections.filter(section => section.category === service);
 
     return (
       <div className="homepage">
         <NavBar />
         <PageLoader />
-        {
-          carouselSection && carouselSection.images
+
+        {carouselSection && carouselSection.images
           && (
             <ScrollAnimation animateIn="fadeIn" duration={2}>
               <Carousel id="homepage" imageUrls={carouselSection.images} />
             </ScrollAnimation>
-          )
-        }
+          )}
+
+        <div className="main-body" style={{ backgroundImage: `url(${localFiles.images.crossword})` }}>
+          {services && (
+            <ScrollAnimation animateIn="bounceInUp" duration={1}>
+              <Services services={services} />
+            </ScrollAnimation>
+          )}
+        </div>
       </div>
     );
   }
