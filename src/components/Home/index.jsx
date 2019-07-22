@@ -6,11 +6,12 @@ import NavBar from '../NavBar';
 import Carousel from '../Carousel';
 import getAllSections from '../../redux/actions/websiteSections';
 import {
-  endpoints, carousel, localFiles, service,
+  endpoints, carousel, localFiles, service, about,
 } from '../../common';
 import './home.scss';
 import PageLoader from '../PageLoader';
 import Services from '../Services';
+import About from '../About';
 
 
 class Home extends Component {
@@ -23,6 +24,7 @@ class Home extends Component {
     const { sections } = this.props;
     const carouselSection = sections.find(section => section.category === carousel);
     const services = sections.filter(section => section.category === service);
+    const aboutSection = sections.find(section => section.category === about);
 
     return (
       <div className="homepage">
@@ -31,15 +33,21 @@ class Home extends Component {
 
         {carouselSection && carouselSection.images
           && (
-            <ScrollAnimation animateIn="fadeIn" duration={2}>
+            <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce>
               <Carousel id="homepage" imageUrls={carouselSection.images} />
             </ScrollAnimation>
           )}
 
         <div className="main-body" style={{ backgroundImage: `url(${localFiles.images.crossword})` }}>
           {services && (
-            <ScrollAnimation animateIn="bounceInUp" duration={1} delay={2}>
+            <ScrollAnimation animateIn="bounceInUp" duration={1} delay={2} animateOnce>
               <Services services={services} />
+            </ScrollAnimation>
+          )}
+
+          {aboutSection && (
+            <ScrollAnimation animateIn="bounceInUp" duration={1} animateOnce>
+              <About aboutSection={aboutSection} />
             </ScrollAnimation>
           )}
         </div>
