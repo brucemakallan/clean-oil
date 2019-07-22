@@ -1,6 +1,23 @@
 @import '../../common/colors.scss';
 
 .about-page {
+  .section-sub-heading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+
+    .about-logo-wrapper {
+      width: 140px;
+
+      .about-logo {
+        width: 100%;
+        padding: 20px;
+      } 
+    }
+  }
   .about-image {
     img {
       width: 100%;
@@ -30,6 +47,9 @@
 
 @media screen and (max-width: 800px) {
   .about-page {
+    .section-sub-heading {
+      flex-direction: column;
+    }
     .about-image {
       margin-bottom: 40px;
     }

@@ -17,33 +17,40 @@ const icons = [
 const About = ({ aboutSection }) => (
   <div className="about-page">
     <div className="section-padding">
-      <div className="section-heading">
-        Who we are
-        <hr />
-      </div>
-
       {aboutSection && (
-        <div className="responsive-flex">
-          <div className="about-image responsive-flex-child third">
-            {aboutSection.images && aboutSection.images.length > 0
+        <React.Fragment>
+          <div className="section-sub-heading">
+            <div className="about-logo-wrapper">
+              <img src={aboutSection.files[0].source} alt="Logo" className="about-logo" />
+            </div>
+            <div>
+              <span className="bold accentColor">CLEAN</span>
+              <span className="bold primaryColor">OIL</span>
+            </div>
+            <span>&nbsp;UGANDA LIMITED</span>
+          </div>
+          <div className="responsive-flex">
+            <div className="about-image responsive-flex-child third">
+              {aboutSection.images && aboutSection.images.length > 0
             && <img src={aboutSection.images[0]} alt="about us" />}
-          </div>
+            </div>
 
-          <div className="about-details responsive-flex-child two-thirds">
-            {aboutSection.body.split('>').map((aboutInfo, index) => (
-              aboutInfo.length > 0 && (
-                <div key={String(index)} className="about-info mb-4">
-                  <div className="circled">
-                    {icons[index]}
+            <div className="about-details responsive-flex-child two-thirds">
+              {aboutSection.body.split('>').map((aboutInfo, index) => (
+                aboutInfo.length > 0 && (
+                  <div key={String(index)} className="about-info mb-4">
+                    <div className="circled">
+                      {icons[index]}
+                    </div>
+                    <div className="text">
+                      <ReactMarkdown source={aboutInfo} />
+                    </div>
                   </div>
-                  <div className="text">
-                    <ReactMarkdown source={aboutInfo} />
-                  </div>
-                </div>
-              )
-            ))}
+                )
+              ))}
+            </div>
           </div>
-        </div>
+        </React.Fragment>
       )}
     </div>
   </div>
@@ -52,6 +59,9 @@ const About = ({ aboutSection }) => (
 About.propTypes = {
   aboutSection: PropTypes.shape({
     images: PropTypes.arrayOf(PropTypes.string).isRequired,
+    files: PropTypes.arrayOf(PropTypes.shape({
+      source: PropTypes.string.isRequired,
+    })).isRequired,
     body: PropTypes.string.isRequired,
   }).isRequired,
 };
