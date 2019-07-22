@@ -6,7 +6,7 @@
   -webkit-box-shadow: none;
 }
 @mixin shaddows {
-  -webkit-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.21);
-  -moz-box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.21);
-  box-shadow: 10px 10px 5px -4px rgba(0,0,0,0.21);
+  -webkit-box-shadow: 10px 10px 5px -4px rgba(36, 102, 246, 0.3);
+  -moz-box-shadow: 10px 10px 5px -4px rgba(36, 102, 246, 0.3);
+  box-shadow: 10px 10px 5px -4px rgba(36, 102, 246, 0.3);
 }

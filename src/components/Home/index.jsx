@@ -38,7 +38,7 @@ class Home extends Component {
 
         <div className="main-body" style={{ backgroundImage: `url(${localFiles.images.crossword})` }}>
           {services && (
-            <ScrollAnimation animateIn="bounceInUp" duration={1}>
+            <ScrollAnimation animateIn="bounceInUp" duration={1} delay={2}>
               <Services services={services} />
             </ScrollAnimation>
           )}
