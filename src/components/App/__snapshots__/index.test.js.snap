@@ -68,7 +68,15 @@ exports[`App should render correctly 1`] = `
       >
         <Switch>
           <Route
-            component={[Function]}
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "WrappedComponent": [Function],
+                "compare": null,
+                "displayName": "Connect(Home)",
+                "type": [Function],
+              }
+            }
             computedMatch={
               Object {
                 "isExact": true,
@@ -88,7 +96,7 @@ exports[`App should render correctly 1`] = `
             }
             path="/"
           >
-            <Home
+            <Connect(Home)
               history={
                 Object {
                   "action": "POP",
@@ -126,12 +134,229 @@ exports[`App should render correctly 1`] = `
                 }
               }
             >
-              <div
-                className="homepage"
+              <Home
+                getAllSectionsDispatch={[Function]}
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "createHref": [Function],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+                sections={
+                  Array [
+                    Object {
+                      "__v": 0,
+                      "_id": "5c9fdcf69c5e1a0d891d506e",
+                      "array": Array [],
+                      "body": "test",
+                      "category": "test",
+                      "dateCreated": "1553980662739",
+                      "dateIn": "124231221",
+                      "dateOut": "124231222",
+                      "files": Array [
+                        Object {
+                          "title": "sample file",
+                          "url": "https://iviidev.info/downloads/files/sample.pdf",
+                        },
+                      ],
+                      "heading1": "test1",
+                      "heading2": "test2",
+                      "heading3": "test3",
+                      "heading4": "test4",
+                      "heading5": "test5",
+                      "heading6": "test6",
+                      "images": Array [
+                        "https://iviidev.info/downloads/images/sample.jpg",
+                      ],
+                      "parent": "312313432223",
+                    },
+                  ]
+                }
               >
-                test
-              </div>
-            </Home>
+                <div
+                  className="homepage"
+                >
+                  <NavBar>
+                    <div
+                      className="navigation-bar"
+                    >
+                      <div
+                        className="wrapper"
+                      >
+                        <header>
+                          <nav
+                            className=""
+                          >
+                            <div
+                              className="menu-icon"
+                            >
+                              <button
+                                className="iconButton"
+                                onClick={[Function]}
+                                type="button"
+                              >
+                                <FontAwesomeIcon
+                                  border={false}
+                                  className="white"
+                                  fixedWidth={false}
+                                  flip={null}
+                                  icon={
+                                    Object {
+                                      "icon": Array [
+                                        448,
+                                        512,
+                                        Array [],
+                                        "f0c9",
+                                        "M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z",
+                                      ],
+                                      "iconName": "bars",
+                                      "prefix": "fas",
+                                    }
+                                  }
+                                  inverse={false}
+                                  listItem={false}
+                                  mask={null}
+                                  pull={null}
+                                  pulse={false}
+                                  rotation={null}
+                                  size={null}
+                                  spin={false}
+                                  symbol={false}
+                                  title=""
+                                  transform={null}
+                                >
+                                  <svg
+                                    aria-hidden="true"
+                                    className="svg-inline--fa fa-bars fa-w-14 white"
+                                    data-icon="bars"
+                                    data-prefix="fas"
+                                    focusable="false"
+                                    role="img"
+                                    style={Object {}}
+                                    viewBox="0 0 448 512"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+                                      fill="currentColor"
+                                      style={Object {}}
+                                    />
+                                  </svg>
+                                </FontAwesomeIcon>
+                              </button>
+                            </div>
+                            <div
+                              className="logo"
+                            >
+                              <span
+                                className="thin"
+                              >
+                                CLEAN
+                              </span>
+                              <span
+                                className="bold"
+                              >
+                                OIL
+                              </span>
+                            </div>
+                            <div
+                              className="menu"
+                            >
+                              <ul
+                                className=""
+                              >
+                                <li>
+                                  <a
+                                    href="/"
+                                  >
+                                    Home
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    href="/"
+                                  >
+                                    Our Business
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    href="/"
+                                  >
+                                    Careers
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    href="/"
+                                  >
+                                    About
+                                  </a>
+                                </li>
+                                <li>
+                                  <a
+                                    href="/"
+                                  >
+                                    Contact
+                                  </a>
+                                </li>
+                              </ul>
+                            </div>
+                          </nav>
+                        </header>
+                      </div>
+                    </div>
+                  </NavBar>
+                  <Connect(PageLoader)>
+                    <PageLoader
+                      dispatch={[Function]}
+                      showLoader={false}
+                    />
+                  </Connect(PageLoader)>
+                  <div
+                    className="page-header"
+                  />
+                  <div
+                    className="main-body"
+                    style={
+                      Object {
+                        "backgroundImage": "url(./images/crossword.png)",
+                      }
+                    }
+                  />
+                </div>
+              </Home>
+            </Connect(Home)>
           </Route>
         </Switch>
       </Router>

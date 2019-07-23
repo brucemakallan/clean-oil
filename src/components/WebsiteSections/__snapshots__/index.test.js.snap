@@ -110,7 +110,7 @@ exports[`Website Sections should render correctly 1`] = `
             className="flex-container mb-3"
           >
             <h1>
-              Articles
+              Website Sections
             </h1>
             <Link
               className="btn btn-primary btn-sm button-link"

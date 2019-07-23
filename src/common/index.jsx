@@ -44,11 +44,13 @@ export const article = 'ARTICLE';
 export const about = 'ABOUT';
 export const carousel = 'CAROUSEL';
 export const service = 'SERVICE';
+export const contact = 'CONTACT';
 export const entityTypes = [
   article,
   about,
   carousel,
   service,
+  contact,
 ];
 
 export const removeUnsupportedProperties = (passedEntity, unsupportedProperties) => {

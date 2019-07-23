@@ -327,6 +327,24 @@ exports[`InputForm should render correctly 1`] = `
           >
             ABOUT
           </option>
+          <option
+            key="2"
+            value="CAROUSEL"
+          >
+            CAROUSEL
+          </option>
+          <option
+            key="3"
+            value="SERVICE"
+          >
+            SERVICE
+          </option>
+          <option
+            key="4"
+            value="CONTACT"
+          >
+            CONTACT
+          </option>
         </select>
       </div>
       <div

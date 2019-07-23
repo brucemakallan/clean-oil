@@ -29,6 +29,12 @@ const About = ({ aboutSection }) => (
             </div>
             <span>&nbsp;UGANDA LIMITED</span>
           </div>
+
+          <div className="section-heading">
+            Who we are
+            <hr />
+          </div>
+
           <div className="responsive-flex">
             <div className="about-image responsive-flex-child third">
               {aboutSection.images && aboutSection.images.length > 0

@@ -6,12 +6,13 @@ import NavBar from '../NavBar';
 import Carousel from '../Carousel';
 import getAllSections from '../../redux/actions/websiteSections';
 import {
-  endpoints, carousel, localFiles, service, about,
+  endpoints, carousel, localFiles, service, about, contact,
 } from '../../common';
 import './home.scss';
 import PageLoader from '../PageLoader';
 import Services from '../Services';
 import About from '../About';
+import Contacts from '../Contacts';
 
 
 class Home extends Component {
@@ -25,6 +26,7 @@ class Home extends Component {
     const carouselSection = sections.find(section => section.category === carousel);
     const services = sections.filter(section => section.category === service);
     const aboutSection = sections.find(section => section.category === about);
+    const contacts = sections.filter(section => section.category === contact);
 
     return (
       <div className="homepage">
@@ -50,6 +52,12 @@ class Home extends Component {
           {services && services.length > 0 && (
             <ScrollAnimation animateIn="bounceInUp" duration={1} animateOnce>
               <Services services={services} />
+            </ScrollAnimation>
+          )}
+
+          {contacts && contacts.length > 0 && (
+            <ScrollAnimation animateIn="bounceInUp" duration={1} animateOnce>
+              <Contacts contacts={contacts} />
             </ScrollAnimation>
           )}
         </div>
