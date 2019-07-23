@@ -31,21 +31,23 @@ class Home extends Component {
         <NavBar />
         <PageLoader />
 
-        {carouselSection && carouselSection.images
+        <div className="page-header">
+          {carouselSection && carouselSection.images
           && (
             <ScrollAnimation animateIn="fadeIn" duration={2} animateOnce>
               <Carousel id="homepage" imageUrls={carouselSection.images} />
             </ScrollAnimation>
           )}
+        </div>
 
         <div className="main-body" style={{ backgroundImage: `url(${localFiles.images.crossword})` }}>
-          {aboutSection && (
-            <ScrollAnimation animateIn="bounceInUp" duration={1} animateOnce>
+          {aboutSection && aboutSection.body && (
+            <ScrollAnimation animateIn="bounceInUp" duration={1} delay={2} animateOnce>
               <About aboutSection={aboutSection} />
             </ScrollAnimation>
           )}
 
-          {services && (
+          {services && services.length > 0 && (
             <ScrollAnimation animateIn="bounceInUp" duration={1} animateOnce>
               <Services services={services} />
             </ScrollAnimation>

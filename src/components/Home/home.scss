@@ -2,6 +2,10 @@ $MAX_CAROUSEL_HEIGHT: 600px;
 $MAX_CAROUSEL_HEIGHT_MOBILE: 200px;
 
 .homepage {
+  .page-header {
+    min-height: $MAX_CAROUSEL_HEIGHT;
+    background-color: black;
+  }
   #imageCarousel-homepage {
     .carousel-item {
       width: 100vw;
@@ -18,6 +22,9 @@ $MAX_CAROUSEL_HEIGHT_MOBILE: 200px;
 
 @media screen and (max-width: 800px) {
   .homepage {
+    .page-header {
+      min-height: $MAX_CAROUSEL_HEIGHT_MOBILE;
+    }
     #imageCarousel-homepage {
       padding-top: 90px;
 
