@@ -37,6 +37,9 @@ export const localFiles = {
     logo: './images/logo.png',
     prismBackground: './images/prism.png',
     crossword: './images/crossword.png',
+    twitter: './images/twitter.png',
+    facebook: './images/facebook.png',
+    instagram: './images/instagram.png',
   },
 };
 

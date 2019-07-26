@@ -51,7 +51,7 @@ class NavBar extends Component {
                   <li><a href="/">Our Business</a></li>
                   <li><a href="/">Careers</a></li>
                   <li><a href="/">About</a></li>
-                  <li><a href="/">Contact</a></li>
+                  <li><a href="/">Contacts</a></li>
                 </ul>
               </div>
             </nav>

@@ -13,6 +13,26 @@ import PageLoader from '../PageLoader';
 import Services from '../Services';
 import About from '../About';
 import Contacts from '../Contacts';
+import ContactForm from '../ContactForm';
+
+const style = { backgroundImage: `url(${localFiles.images.prismBackground})` };
+const socialMediaPlatforms = [
+  {
+    name: 'Twitter',
+    url: 'http://twitter.com',
+    logo: localFiles.images.twitter
+  },
+  {
+    name: 'Facebook',
+    url: 'http://facebook.com',
+    logo: localFiles.images.facebook
+  },
+  {
+    name: 'Instagram',
+    url: 'http://instagram.com',
+    logo: localFiles.images.instagram
+  },
+];
 
 
 class Home extends Component {
@@ -60,6 +80,28 @@ class Home extends Component {
               <Contacts contacts={contacts} />
             </ScrollAnimation>
           )}
+
+          <div className="large-footer section-padding responsive-flex" style={style}>
+            <div className="links-section responsive-flex-child half">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">Our Business</a></li>
+                <li><a href="/">Careers</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Contacts</a></li>
+              </ul>
+              <div className="social-media">
+                {socialMediaPlatforms.map(platform => (
+                  <a key={platform.url} href={platform.url} target="_blank" rel="noopener noreferrer">
+                    <img src={platform.logo} alt={platform.name} className="social-media-logo" />
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="contact-form-section responsive-flex-child half">
+              <ContactForm />
+            </div>
+          </div>
         </div>
       </div>
     );
