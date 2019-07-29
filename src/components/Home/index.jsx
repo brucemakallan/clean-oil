@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ScrollAnimation from 'react-animate-on-scroll';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { scrollSpy } from 'react-scroll';
 import NavBar from '../NavBar';
 import Carousel from '../Carousel';
 import getAllSections from '../../redux/actions/websiteSections';
@@ -39,6 +40,7 @@ class Home extends Component {
   async componentDidMount() {
     const { getAllSectionsDispatch } = this.props;
     await getAllSectionsDispatch(endpoints().articlesGetAll);
+    scrollSpy.update();
   }
 
   render() {
@@ -49,7 +51,7 @@ class Home extends Component {
     const contacts = sections.filter(section => section.category === contact);
 
     return (
-      <div className="homepage">
+      <div id="home-anchor" className="homepage">
         <NavBar />
         <PageLoader />
 

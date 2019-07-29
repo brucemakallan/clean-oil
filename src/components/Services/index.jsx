@@ -11,7 +11,7 @@ const icons = [
 ];
 
 const Services = ({ services }) => (
-  <div className="services-page">
+  <div id="services-anchor" className="services-page">
     <div className="section-padding">
       <div className="section-heading">
         What we offer

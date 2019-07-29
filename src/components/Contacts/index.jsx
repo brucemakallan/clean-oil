@@ -14,7 +14,7 @@ const icons = [
 ];
 
 const Contacts = ({ contacts }) => (
-  <div className="contacts-page">
+  <div id="contacts-anchor" className="contacts-page">
     <div className="section-padding">
       <div className="contact-boxes responsive-flex">
         {contacts && (

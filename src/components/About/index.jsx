@@ -15,7 +15,7 @@ const icons = [
 ];
 
 const About = ({ aboutSection }) => (
-  <div className="about-page">
+  <div id="about-anchor" className="about-page">
     <div className="section-padding">
       {aboutSection && (
         <React.Fragment>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './navbar.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-scroll';
 
 const TOGGLE_HEIGHT = 200;
 
@@ -30,6 +31,24 @@ class NavBar extends Component {
 
   render() {
     const { scrolled, showMenu } = this.state;
+    const navLinks = [
+      {
+        name: 'Home',
+        to: 'home-anchor',
+      },
+      {
+        name: 'About',
+        to: 'about-anchor',
+      },
+      {
+        name: 'Services',
+        to: 'services-anchor',
+      },
+      {
+        name: 'Contacts',
+        to: 'contacts-anchor',
+      },
+    ];
 
     return (
       <div className="navigation-bar">
@@ -47,11 +66,20 @@ class NavBar extends Component {
               </div>
               <div className="menu">
                 <ul className={`${showMenu ? 'showing' : ''}`}>
-                  <li><a href="/">Home</a></li>
-                  <li><a href="/">Our Business</a></li>
-                  <li><a href="/">Careers</a></li>
-                  <li><a href="/">About</a></li>
-                  <li><a href="/">Contacts</a></li>
+                  {navLinks.map((link, index) => (
+                    <li key={String(index)}>
+                      <Link
+                        activeClass="active-nav-link"
+                        to={link.to}
+                        spy
+                        smooth
+                        duration={500}
+                        offset={-40}
+                      >
+                        {link.name}
+                      </Link>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </nav>
