@@ -102,6 +102,23 @@ class Home extends Component {
               <ContactForm />
             </div>
           </div>
+          <div className="small-footer responsive-flex">
+            <span className="responsive-flex-child half">
+              &copy;
+              &nbsp;
+              {new Date().getFullYear()}
+              &nbsp;
+              Clean Oil Uganda Ltd. All Rights Reserved.
+            </span>
+            <a
+              href="https://iviidev.info"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="responsive-flex-child half developer"
+            >
+                Developer
+            </a>
+          </div>
         </div>
       </div>
     );

@@ -57,6 +57,24 @@ $MAX_CAROUSEL_HEIGHT_MOBILE: 200px;
 
     // }
   }
+  .small-footer {
+    font-size: 13px;
+    padding: 5px;
+    background-color: #2a2a2a;
+    color: #dddddd;
+
+    a {
+      color: #aaaaaa;
+      text-decoration: none;
+
+      &:hover {
+        color: #aaaaaa;
+      }
+    }
+    .developer {
+      text-align: right;
+    }
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -74,6 +92,13 @@ $MAX_CAROUSEL_HEIGHT_MOBILE: 200px;
     .large-footer {
       .links-section {
         margin: 50px 0;
+      }
+    }
+    .small-footer {
+      text-align: center;
+      
+      .developer {
+        text-align: center;
       }
     }
   }
