@@ -84,7 +84,7 @@ class Home extends Component {
           )}
 
           <div className="large-footer section-padding responsive-flex" style={style}>
-            <div className="links-section responsive-flex-child half">
+            {/* <div className="links-section responsive-flex-child half">
               <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="/">Our Business</a></li>
@@ -99,8 +99,8 @@ class Home extends Component {
                   </a>
                 ))}
               </div>
-            </div>
-            <div className="contact-form-section responsive-flex-child half">
+            </div> */}
+            <div className="contact-form-section responsive-flex-child full">
               <ContactForm />
             </div>
           </div>
