@@ -2,12 +2,12 @@ import React from 'react';
 import './services.scss';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSync, faDollarSign, faLeaf } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faArrowUp, faTruckPickup } from '@fortawesome/free-solid-svg-icons';
 
 const icons = [
-  <FontAwesomeIcon className="white" icon={faSync} />,
-  <FontAwesomeIcon className="white" icon={faDollarSign} />,
-  <FontAwesomeIcon className="white" icon={faLeaf} />
+  <FontAwesomeIcon className="white" icon={faArrowDown} />,
+  <FontAwesomeIcon className="white" icon={faArrowUp} />,
+  <FontAwesomeIcon className="white" icon={faTruckPickup} />
 ];
 
 const Services = ({ services }) => (

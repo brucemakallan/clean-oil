@@ -105,12 +105,13 @@ html, body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100px;
-  max-width: 100px;
-  min-height: 100px;
-  max-height: 100px;
+  min-width: 70px;
+  max-width: 70px;
+  min-height: 70px;
+  max-height: 70px;
   border: 2px solid $accentColor;
   border-radius: 50%;
+  font-size: 10px;
 }
 
 
